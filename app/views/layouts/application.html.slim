@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title ClickDonations
+    = csrf_meta_tags
+    = csp_meta_tag
+
+  body
+    p.notice
+      = notice
+    p.alert
+      = alert
+
+    = yield
+
+    = yield :scripts
