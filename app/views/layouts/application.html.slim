@@ -5,11 +5,16 @@ html
     = csrf_meta_tags
     = csp_meta_tag
 
+    = stylesheet_link_tag "application", :media => "all"
+
   body
+    = render 'shared/nav_bar'
+
     p.notice
       = notice
     p.alert
       = alert
+
 
     = yield
 
