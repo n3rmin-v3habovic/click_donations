@@ -1,4 +1,5 @@
 span.mdl-layout-title
   = t('title')
 nav.mdl-navigation
-  /a.mdl-navigation__link href=""  Link
+  = link_to t('navigation.sign_in'), new_user_session_path, class: 'mdl-navigation__link'
+  = link_to t('navigation.sign_up'), new_user_registration_path, class: 'mdl-navigation__link'
