@@ -1,0 +1,16 @@
+.mdl-grid
+  .cdl-cell.mdl-cell--4-col.mdl-cell--2-col-tablet
+  .cdl-cell.mdl-cell--4-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone
+    h2 Forgot your password?
+
+    = form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post } do |f|
+      = devise_error_messages!
+
+      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+        = f.email_field :email, autocomplete: 'off', class: 'mdl-textfield__input'
+        = f.label :email, class: 'mdl-textfield__label'
+      .actions
+        = f.submit 'Send me reset password instructions', class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
+
+    = render 'devise/shared/links'
+
