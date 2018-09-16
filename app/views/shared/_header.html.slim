@@ -4,5 +4,6 @@
   .mdl-layout-spacer
   nav.mdl-navigation.mdl-layout--large-screen-only
     - unless current_user
-      a.mdl-navigation__link href=""  = t('navigation.sign_in')
-      a.mdl-navigation__link href=""  = t('navigation.sign_up')
+      = link_to t('navigation.sign_in'), new_user_session_path, class: 'mdl-navigation__link'
+      = link_to t('navigation.sign_up'), new_user_registration_path, class: 'mdl-navigation__link'
+
