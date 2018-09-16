@@ -7,7 +7,6 @@ class User < ApplicationRecord
   auto_strip_attributes :first_name, :last_name, :email
 
   # VALIDATIONS
-  # validates_presence_of :first_name, :last_name
   validates :password, presence: true,
             length: { in: 8..20 },
             if: :password_required?

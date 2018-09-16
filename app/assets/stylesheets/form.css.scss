@@ -1,0 +1,13 @@
+@import "material_design";
+
+form {
+  .submit-action {
+    @extend .mdl-button, .mdl-button--raised, .mdl-button--accent, .mdl-color--accent;
+  }
+}
+
+.form-only-container {
+  h2 {
+    text-align: center;
+  }
+}
