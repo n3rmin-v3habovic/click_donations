@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable, :trackable,
+         :trackable,
          validate_on_invite: true
 
   auto_strip_attributes :first_name, :last_name, :email

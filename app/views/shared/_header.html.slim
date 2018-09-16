@@ -3,7 +3,9 @@
     = t('title')
   .mdl-layout-spacer
   nav.mdl-navigation.mdl-layout--large-screen-only
-    - unless current_user
+    - if user_signed_in?
+      = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'mdl-navigation__link'
+    - else
       = link_to t('navigation.sign_in'), new_user_session_path, class: 'mdl-navigation__link'
       = link_to t('navigation.sign_up'), new_user_registration_path, class: 'mdl-navigation__link'
 
