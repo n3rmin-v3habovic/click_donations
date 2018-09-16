@@ -19,7 +19,9 @@ html
         = render 'shared/drawer'
       main.mdl-layout__content
         .page-content
-          = yield
+          .page-center-container
+            .form-container
+              = yield
 
     = yield :scripts
     script src="https://code.getmdl.io/1.3.0/material.min.js"
