@@ -3,46 +3,42 @@ class Body extends React.Component {
         super(props);
         this.state = {
             fruits: []
-
         };
-        this.handleUpdate = this.handleUpdate.bind(this);
-        this.updateFruit = this.updateFruit.bind(this)
-
     }
-    handleUpdate(fruit){
-        fetch(`http://localhost:3000/api/v1/fruits/${fruit.id}`,
-            {
-                method: 'PUT',
-                body: JSON.stringify({fruit: fruit}),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then((response) => {
-            this.updateFruit(fruit)
-        })
-    }
-    updateFruit(fruit){
-        let newFruits = this.state.fruits.filter((f) => f.id !== fruit.id)
-        newFruits.push(fruit)
-        this.setState({
-            fruits: newFruits
-        })
-    }
-
     componentDidMount(){
-        fetch('/api/v1/items.json')
+        fetch('/api/v1/fruits.json')
             .then((response) => {return response.json()})
-            .then((data) => {this.setState({ items: data }) });
+            .then((data) => {this.setState({ fruits: data }) });
     }
-
-
     render(){
         return(
             <div>
-                <NewFruit handleFormSubmit={this.handleFormSubmit}/>
-                <AllFruits fruits={this.state.fruits} handleDelete=
-                    {this.handleDelete}handleUpdate = {this.handleUpdate}/>
+                <AllFruits fruits={this.state.fruits} />
             </div>
         )
     }
+    const AllFruits = (props) => {
+        var fruits = props.fruits.map((fruit) => {
+            return(
+                <div key={fruit.id}>
+                    <h1>{fruit.name}</h1>
+                    <p>{fruit.description}</p>
+                </div>
+            )
+        })
+        return(
+            <div>
+                {fruits}
+            </div>
+        )
+    }
+    const Main = (props) => {
+        return(
+            <div>
+                <h1>Fruits are great!</h1>
+                <Body />
+            </div>
+        )
+    }
+
 }

@@ -6,40 +6,31 @@ class AllFruits extends React.Component {
             fruits: []
         };
     }
-
-    componentDidMount() {
+    componentDidMount(){
         fetch('/api/v1/fruits.json')
-            .then((response) => {
-                return response.json()
-            })
-            .then((data) => {
-                this.setState({fruits: data})
-            });
+            .then((response) => {return response.json()})
+            .then((data) => {this.setState({ fruits: data }) });
     }
-
-    render() {
-        return (
+    render(){
+        return(
             <div>
                 <h1>To do: List of fruits</h1>
             </div>
         )
     }
-
-    render() {
-        const AllFruits = (props) => {
-            var fruits = props.fruits.map((fruit) => {
-                return (
-                    <div key={fruit.id}>
-                        <Fruit fruit={fruit} handleDelete={props.handleDelete}
-                               handleUpdate={props.handleUpdate}/>
-                    </div>
-                )
-            })
-            return (
-                <div>
-                    {fruits}
+    render(){
+        var fruits = this.state.fruits.map((fruit) => {
+            return(
+                <div key={fruit.id}>
+                    <h1>{fruit.name}</h1>
+                    <p>{fruit.description}</p>
                 </div>
             )
-        }
+        })
+        return(
+            <div>
+                {fruits}
+            </div>
+        )
     }
 }
