@@ -13,7 +13,7 @@ gem 'slim', '~> 4.0', '>= 4.0.1'
 gem 'auto_strip_attributes', '2.0.6'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '0.18.1'
-
+gem 'react_on_rails', '11.1.4'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
