@@ -11,7 +11,12 @@ html
     = stylesheet_link_tag "application", :media => "all"
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
 
-    = render 'shared/google_ad_sense'
+    script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async=''
+    javascript:
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7948386508690576",
+        enable_page_level_ads: true
+      });
 
   body
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
