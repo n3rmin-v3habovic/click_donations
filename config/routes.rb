@@ -7,7 +7,5 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'dashboards', to: 'dashboards#index'
-
   devise_for :users
 end
