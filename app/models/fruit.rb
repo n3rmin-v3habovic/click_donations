@@ -1,2 +1,0 @@
-class Fruit < ApplicationRecord
-end
