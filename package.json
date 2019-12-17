@@ -1,5 +1,10 @@
 {
   "name": "click_donations",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@material-ui/core": "^4.8.0",
+    "react-on-rails": "11.3.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.4"
+  }
 }
