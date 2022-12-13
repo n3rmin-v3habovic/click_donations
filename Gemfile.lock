@@ -69,7 +69,7 @@ GEM
       nokogiri (~> 1.8)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.2)
-    crass (1.0.4)
+    crass (1.0.6)
     devise (4.5.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -90,12 +90,12 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    libv8 (7.3.492.27.1-x86_64-linux)
+    libv8 (8.4.255.0-x86_64-linux)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.2.2)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -105,15 +105,15 @@ GEM
     method_source (0.9.0)
     mimemagic (0.3.2)
     mini_mime (1.0.1)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     mini_racer (0.2.8)
       libv8 (>= 6.9.411)
     minitest (5.11.3)
     msgpack (1.2.4)
     multi_json (1.13.1)
     nio4r (2.3.1)
-    nokogiri (1.8.4)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.10)
+      mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (0.18.1)
     public_suffix (3.0.3)
@@ -212,7 +212,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   auto_strip_attributes (= 2.0.6)
